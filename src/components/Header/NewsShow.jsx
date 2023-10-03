@@ -1,20 +1,15 @@
 import { FaRegBookmark,FaRegEye} from 'react-icons/fa';
 import { BsShare } from 'react-icons/bs';
-import { useState } from 'react';
-
+import { Link } from "react-router-dom";
 
 const NewsShow = ({ showNews }) => {
 
-    const [show, setShow] = useState(false)
+    // const [show, setShow] = useState(false)
     const { author, title, details, thumbnail_url, total_view, _id, category_id, image_url,rating } = showNews;
-    // console.log(author);
-    // console.log(showNews);
+    console.log(author);
+    console.log(showNews);
 
-    // console.log(details.slice(0));
-    const seeAll = () => {
-        const see = details.slice(0);
-        setShow(see)
-    }
+
     return (
         <div className='border mb-8 rounded'>
             <div className="bg-[#F3F3F3] h-20 flex justify-between items-center px-5 mb-5">
@@ -33,10 +28,15 @@ const NewsShow = ({ showNews }) => {
             <div className='space-y-5 p-5'>
                 <h2 className="text-xl font-bold">{title}</h2>
                 <img src={image_url} alt="" />
-                <p className='text-base font-normal text-[#706f6f]'>{details.slice(0, 160)}....{show}
-                </p>
+              
                 {
-                    details ? <button onClick={seeAll} className='text-amber-500 '>Read More</button> : "hidden"
+                    details.length > 200
+                     ? 
+                     <p className="text-[#706f6f]">{details.slice(0,200)} <Link
+                      to={`/news/${_id}`}
+                      className= "text-xl font-bold text-blue-600">Read More....</Link></p> 
+                    : 
+                    <p className='text-[#706f6f]'>{details}</p>
                 }
                 <hr className='mt-5 w-[95%] mx-auto' />
                 <div>
