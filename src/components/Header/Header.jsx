@@ -5,8 +5,7 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div className="container mx-auto font-poppins">
-            <h2 className='my-8 font-bold text-3xl text-center'>this is header</h2>
+        <div className="container mx-auto font-poppins my-8">
             <Outlet></Outlet>
             <div className="grid lg:grid-cols-4 gap-6 grid-cols-1 md:grid-cols-2">
                 <div>
