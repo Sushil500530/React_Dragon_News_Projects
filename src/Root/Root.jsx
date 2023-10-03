@@ -1,9 +1,13 @@
 
 import { createBrowserRouter } from 'react-router-dom';
 import Header from '../components/Header/Header';
-import Home from '../components/pages/Home/Home';
+
 import NewsDetails from '../components/Header/NewsDetails';
 import Resister from '../components/pages/Resister/Resister';
+import Login from '../components/pages/Login/Login';
+import About from '../components/pages/about/About';
+import Career from '../components/pages/career/Career';
+import Home from '../components/pages/Home/Home';
 
 const routes = createBrowserRouter([
     {
@@ -11,16 +15,28 @@ const routes = createBrowserRouter([
         element: <Header></Header>,
         children: [
             {
-                path:'/',
+                path: '/',
                 element: <Home></Home>
             },
             {
-            path:"/categories/:id",
-            element:<NewsDetails></NewsDetails>
+                path: "/categories/:id",
+                element: <NewsDetails></NewsDetails>
             },
             {
-            path: '/resister' ,
-            element: <Resister></Resister>
+                path: '/resister',
+                element: <Resister></Resister>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+            path:'/about',
+            element:<About></About>
+            },
+            {
+             path: '/career',
+             element:<Career></Career>
             }
         ]
     }

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 
 const NewsDetails = () => {
     return (
@@ -32,4 +34,7 @@ const NewsDetails = () => {
     );
 };
 
+NewsDetails.propTypes = {
+    
+}
 export default NewsDetails;

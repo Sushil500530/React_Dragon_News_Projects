@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types"
 const Categories = ({category}) => {
     const {name,id} = category ;
     return (
@@ -8,5 +8,7 @@ const Categories = ({category}) => {
         </div>
     );
 };
-
+Categories.prropTypes = {
+category:PropTypes.object.isRequired
+}
 export default Categories;

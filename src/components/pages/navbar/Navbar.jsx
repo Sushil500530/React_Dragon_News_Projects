@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
+import { NavLink,Link } from "react-router-dom";
 import account from "../../../assets/user.png" ;
 
 
 
 const Navbar = () => {
     const navLinks = <>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
-    <li><Link to="/career">Career</Link></li>
+    <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink to="/about">About</NavLink></li>
+    <li><NavLink to="/career">Career</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -44,7 +44,7 @@ const Navbar = () => {
                         <li><a>Logout</a></li>
                     </ul>
                 </div>
-                <button className="btn bg-black text-white px-8 py-2 hover:text-black"><Link to="/login">Login</Link></button>
+                <Link to="/login"><button className="btn bg-black text-white px-8 py-2 hover:text-black"><Link to="/login">Login</Link></button></Link>
             </div>
         </div>
     );
