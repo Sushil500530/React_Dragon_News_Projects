@@ -14,9 +14,9 @@ const News = () => {
     return (
         <div className="mt-12">
             {
-            news.map(news => <div key={news.id}>
+            news.map((news,idx) => <div key={idx}>
                <div className="space-y-2 mb-8">
-               <img className="rounded" src={news.image_url} alt="image" />
+               <img className="rounded" src={news?.image_url} alt="image" />
                 <h1 className="text-xl font-semibold">{news.title}</h1>
                 <h1 className="flex justify-around"> News <span className="flex gap-3 items-center"><MdDateRange></MdDateRange>{moment().format(" MMMM D, YYYY")}</span></h1>
                </div>

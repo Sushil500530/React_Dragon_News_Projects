@@ -11,7 +11,7 @@ const LeftSideNave = () => {
             .then(getData => setCategories(getData))
 
     }, [])
-    console.log(categories);
+    // console.log(categories);
     return (
         <div>
         <h1 className="px-12 py-3 text-center rounded bg-gray-300 text-xl font-semibold mb-8">National News </h1>

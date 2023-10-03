@@ -1,20 +1,20 @@
 import { FaGoogle, FaGithub, FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
-import qzone1 from '../../../assets/qZone1.png' ;
-import qzone2 from '../../../assets/qZone2.png' ;
-import qzone3 from '../../../assets/qZone3.png' ;
+import qzone1 from '../../../assets/qZone1.png';
+import qzone2 from '../../../assets/qZone2.png';
+import qzone3 from '../../../assets/qZone3.png';
 
 const RightSideNave = () => {
     return (
         <div className='space-y-8'>
             <div className='space-y-3'>
                 <h2 className="text-xl font-semibold">Login With</h2>
-                <div className=" border rounded flex items-center justify-center gap-2 font-semibold cursor-pointer py-2 hover:border-blue-500">
+                <div className=" border rounded flex items-center justify-center gap-2 font-semibold cursor-pointer py-2 hover:border-blue-500 transition-all ease-in">
                     <FaGoogle className='text-2xl'></FaGoogle>
-                    <button className='text-base'>Login With Google</button>
+                    <button className='text-base hover:text-blue-500 transition-all ease-in'>Login With Google</button>
                 </div>
-                <div className=" border rounded flex my-3 items-center justify-center gap-2 font-semibold cursor-pointer py-2 hover:border-blue-500">
+                <div className=" border rounded flex my-3 items-center justify-center gap-2 font-semibold cursor-pointer py-2 hover:border-blue-500 transition-all ease-in">
                     <FaGithub className='text-2xl'></FaGithub>
-                    <button className='text-base'>Login With Github</button>
+                    <button className='text-base hover:text-blue-500 transition-all ease-in'>Login With Github</button>
                 </div>
             </div>
             <div className='space-y-5'>
@@ -36,9 +36,14 @@ const RightSideNave = () => {
             </div>
             <div className='space-y-3'>
                 <h2 className="text-xl font-semibold">Q Zone</h2>
-               <img className='cursor-pointer' src={qzone1} alt="" />
-               <img className='cursor-pointer' src={qzone2} alt="" />
-               <img className='cursor-pointer' src={qzone3} alt="" />
+                <img className='cursor-pointer' src={qzone1} alt="" />
+                <img className='cursor-pointer' src={qzone2} alt="" />
+                <img className='cursor-pointer' src={qzone3} alt="" />
+            </div>
+            <div className='text-white w-full h-[520px] bg-black space-y-5 flex flex-col items-center justify-center text-center'>
+                <h3 className='text-3xl font-bold'>Create an Amazing Newspaper</h3>
+                <p>Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
+                <button className='text-2xl bg-red-500 p-5'>Learn More</button>
             </div>
         </div>
     );
