@@ -8,6 +8,7 @@ import Login from '../components/pages/Login/Login';
 import About from '../components/pages/about/About';
 import Career from '../components/pages/career/Career';
 import Home from '../components/pages/Home/Home';
+import PrivetRoutes from './PrivetRoutes';
 
 const routes = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const routes = createBrowserRouter([
            
             {
                 path: "/news/:id",
-                element: <NewsDetails></NewsDetails>
+                element: <PrivetRoutes><NewsDetails></NewsDetails></PrivetRoutes>
             },
             {
                 path: '/resister',

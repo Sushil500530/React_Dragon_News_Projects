@@ -10,7 +10,7 @@ const News = () => {
      .then(response => response.json()) 
      .then(data => setNews(data))
     },[])
-    console.log(news);
+    // console.log(news);
     return (
         <div className="mt-12">
             {

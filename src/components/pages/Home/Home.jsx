@@ -34,7 +34,7 @@ const Home = () => {
                 <div className="lg:col-span-2">
                     <h3 className="text-xl font-bold mb-5">Dragon News Home</h3>
                     {
-                        showNews.map((newses) => <NewsShow showNews={newses} key={newses._id} ></NewsShow>)
+                        showNews.map((newses,idx) => <NewsShow breaking={newses} key={idx} ></NewsShow>)
                     }
                 </div>
                 <div>

@@ -14,7 +14,7 @@ const LeftSideNave = () => {
     // console.log(categories);
     return (
         <div>
-        <h1 className="px-12 py-3 text-center rounded bg-gray-300 text-xl font-semibold mb-8">National News </h1>
+        <h1 className="px-12 py-3 text-center rounded bg-[#f3f3f3] text-xl font-semibold mb-8">National News </h1>
             <div className="space-y-5">
                 {
                 categories.map((category) => <Categories category={category} key={category.id}></Categories> )

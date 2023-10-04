@@ -5,13 +5,14 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('inside firebase comming',import.meta.env.VITE_PASS);
 const firebaseConfig = {
-  apiKey: "AIzaSyCdORap_LazvuaJB3ljN6jjEgNT7pDVtyk",
-  authDomain: "react-dragon.firebaseapp.com",
-  projectId: "react-dragon",
-  storageBucket: "react-dragon.appspot.com",
-  messagingSenderId: "836112616105",
-  appId: "1:836112616105:web:6d64b2c88b7fa3e59ab7b8"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

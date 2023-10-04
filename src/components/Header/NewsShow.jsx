@@ -2,12 +2,12 @@ import { FaRegBookmark,FaRegEye} from 'react-icons/fa';
 import { BsShare } from 'react-icons/bs';
 import { Link } from "react-router-dom";
 
-const NewsShow = ({ showNews }) => {
+const NewsShow = ({ breaking }) => {
 
     // const [show, setShow] = useState(false)
-    const { author, title, details, thumbnail_url, total_view, _id, category_id, image_url,rating } = showNews;
-    console.log(author);
-    console.log(showNews);
+    const { author, title, details, thumbnail_url, total_view, _id, category_id, image_url,rating } = breaking;
+    // console.log(author);
+    // console.log(showNews);
 
 
     return (
