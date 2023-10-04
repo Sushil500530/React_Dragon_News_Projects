@@ -2,13 +2,27 @@ import { FaGoogle, FaGithub, FaTwitter, FaInstagram, FaFacebook } from 'react-ic
 import qzone1 from '../../../assets/qZone1.png';
 import qzone2 from '../../../assets/qZone2.png';
 import qzone3 from '../../../assets/qZone3.png';
+import {useContext} from "react"
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
+
+
 
 const RightSideNave = () => {
+    const {googleSignIn} = useContext(AuthContext)
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+        .then(result => {
+        console.log(result.user)
+        })
+        .catch(error => console.error(error))
+        
+    }
     return (
         <div className='space-y-8'>
             <div className='space-y-3'>
                 <h2 className="text-xl font-semibold">Login With</h2>
-                <div className=" border rounded flex items-center justify-center gap-2 font-semibold cursor-pointer py-2 hover:border-blue-500 transition-all ease-in">
+                <div onClick={handleGoogleSignIn} className=" border rounded flex items-center justify-center gap-2 font-semibold cursor-pointer py-2 hover:border-blue-500 transition-all ease-in">
                     <FaGoogle className='text-2xl'></FaGoogle>
                     <button className='text-base hover:text-blue-500 transition-all ease-in'>Login With Google</button>
                 </div>

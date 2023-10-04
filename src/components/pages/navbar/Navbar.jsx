@@ -9,15 +9,18 @@ import {useContext} from "react"
 const Navbar = () => {
     
     const {user,logOut} = useContext(AuthContext)
+
     const navLinks = <>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
     <li><NavLink to="/career">Career</NavLink></li>
+    <li><NavLink to="/addict">Addict</NavLink></li>
+    <li><NavLink to="/information">Information</NavLink></li>
     </>
     const handleSignOut = () => {
         logOut()
-        .then(result => {
-        console.log(result.user)
+        .then(() => {
+        // console.log(result.user)
         })
         .catch(error => console.error(error))
     }
@@ -42,7 +45,9 @@ const Navbar = () => {
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src={account} alt="image" />
+                           {
+                           user ? <img src={user.photoURL} alt="image" /> :  <img src={account} alt="image" />
+                           }
                         </div>
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
